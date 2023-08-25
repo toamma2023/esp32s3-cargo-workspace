@@ -1,1 +1,4 @@
 # esp32s3-cargo-workspace
+
+ワークスペース下でのビルド時の注意
+toolchainがnightlyのままだとビルドに失敗するため、espをDefaultにすること
