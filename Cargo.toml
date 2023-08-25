@@ -1,0 +1,21 @@
+[workspace]
+members = [
+  "m5-stack-s3-led",
+  "m5-stack-s3-button-and-led",
+]
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[workspace.dependencies]
+log = { version = "0.4.17" }
+esp-idf-sys = { version = "0.33", features = ["binstart"] }
+esp-idf-hal = { version = "0.41" }
+esp-idf-svc = { version = "0.46" }
+embedded-svc = { version = "0.25" }
+libc = "*"
+anyhow = "1"
